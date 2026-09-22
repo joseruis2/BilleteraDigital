@@ -1,0 +1,225 @@
+-- ============================================================================
+-- MIBILLETERA — ESQUEMA COMPLETO Y ACTUALIZADO POR MICROSERVICIO
+-- ============================================================================
+
+
+-- ============================================================================
+-- ms_auth_db
+-- ============================================================================
+
+CREATE TABLE usuario_auth (
+    id                  BIGINT          AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    username            VARCHAR(50)     NOT NULL UNIQUE KEY,
+    password_hash       VARCHAR(255)    NOT NULL,
+    cliente_id          BIGINT          NOT NULL,
+    rol                 VARCHAR(20)     NOT NULL DEFAULT 'CLIENTE',
+    activo              BOOLEAN         NOT NULL DEFAULT TRUE,
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion  TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    UNIQUE KEY uk_usuario_auth_cliente_id (cliente_id),          -- [ACTUALIZADO] era INDEX, ahora UNIQUE (evita doble login por evento reprocesado)
+    INDEX idx_usuario_auth_rol (rol)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+CREATE TABLE refresh_token (
+    id                  BIGINT          AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    usuario_auth_id     BIGINT          NOT NULL,
+    token               VARCHAR(500)    NOT NULL UNIQUE KEY,
+    revocado            BOOLEAN         NOT NULL DEFAULT FALSE,
+    expira_en           TIMESTAMP       NOT NULL,
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    INDEX idx_refresh_token_usuario (usuario_auth_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+-- ============================================================================
+-- ms_cliente_db
+-- ============================================================================
+
+CREATE TABLE cliente (
+    id                  BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    codigo_unico        VARCHAR(20)     NOT NULL UNIQUE KEY,
+    nombres             VARCHAR(100)    NOT NULL,
+    apellidos           VARCHAR(100)    NOT NULL,
+    tipo_documento      VARCHAR(20)     NOT NULL,
+    numero_documento    VARCHAR(20)     NOT NULL,
+    celular             VARCHAR(20)     NOT NULL,
+    correo              VARCHAR(150)    NOT NULL,
+    activo              BOOLEAN         NOT NULL DEFAULT TRUE,
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion  TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    UNIQUE KEY uk_cliente_correo (correo),
+    UNIQUE KEY uk_cliente_celular (celular),
+    INDEX idx_cliente_tipo_numero_documento (tipo_documento, numero_documento),
+    INDEX idx_cliente_activo (activo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- [ACTUALIZADO] antes solo existía en db_pagos — el evento CLIENTE_REGISTRADO
+-- nace aquí, así que db_cliente necesita su propio outbox.
+CREATE TABLE outbox_event (
+    id                  BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    aggregate_type      VARCHAR(50)     NOT NULL,                 -- 'CLIENTE'
+    aggregate_id        BIGINT          NOT NULL,
+    tipo_evento         VARCHAR(50)     NOT NULL,                 -- 'CLIENTE_REGISTRADO'
+    payload             JSON            NOT NULL,
+    publicado           BOOLEAN         NOT NULL DEFAULT FALSE,
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_publicacion   TIMESTAMP       NULL,
+
+    INDEX idx_outbox_publicado (publicado, fecha_creacion)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+-- ============================================================================
+-- ms_producto_db
+-- ============================================================================
+
+CREATE TABLE producto_financiero (
+    id                  BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    codigo_unico        VARCHAR(20)     NOT NULL,
+    tipo_producto       VARCHAR(30)     NOT NULL,
+    nombre              VARCHAR(100)    NOT NULL,
+    activo              BOOLEAN         NOT NULL DEFAULT TRUE,
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion  TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    INDEX idx_producto_tipo (tipo_producto),
+    INDEX idx_producto_activo (activo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO producto_financiero
+(codigo_unico, tipo_producto, nombre, activo)
+VALUES
+('PROD000001', 'CUENTA_AHORRO', 'Cuenta de Ahorros', TRUE),
+('PROD000002', 'CUENTA_CORRIENTE', 'Cuenta Corriente', TRUE),
+('PROD000003', 'CUENTA_DIGITAL', 'Cuenta Digital', TRUE);
+
+
+-- ============================================================================
+-- ms_cuentas_db
+-- ============================================================================
+
+CREATE TABLE cuenta (
+    id                  BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    codigo_unico        VARCHAR(30)     NOT NULL,
+    saldo               DECIMAL(15,2)   NOT NULL DEFAULT 0.00,
+    activo              BOOLEAN         NOT NULL DEFAULT TRUE,
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion  TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    cliente_id          BIGINT          NOT NULL,                 -- referencia cross-DB a ms_cliente_db (sin FK, correcto en microservicios)
+    producto_id         BIGINT          NOT NULL,                 -- referencia cross-DB a ms_producto_db
+
+    UNIQUE KEY uk_cuenta_cliente_producto (cliente_id, producto_id),  -- [ACTUALIZADO] evita cuenta duplicada si el evento se reprocesa
+    INDEX idx_cuenta_cliente_id (cliente_id),
+    INDEX idx_cuenta_producto_id (producto_id),
+    INDEX idx_cuenta_activo (activo),
+
+    CONSTRAINT chk_cuenta_saldo CHECK (saldo >= 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+-- ============================================================================
+-- ms_pagos_db
+-- ============================================================================
+
+CREATE TABLE transferencia (
+    id                  BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    codigo_unico        VARCHAR(30)     NOT NULL,
+    idempotency_key     VARCHAR(64)     NOT NULL,
+    saga_id             VARCHAR(36)     NOT NULL,
+    cuenta_origen_id    BIGINT          NOT NULL,
+    cuenta_destino_id   BIGINT          NOT NULL,
+    monto               DECIMAL(15,2)   NOT NULL,
+    concepto            VARCHAR(200)    NULL,
+    estado              VARCHAR(20)     NOT NULL,
+    paso_saga           VARCHAR(30)     NOT NULL,
+    motivo_fallo        VARCHAR(200)    NULL,
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion  TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    UNIQUE KEY uk_transferencia_idempotency (idempotency_key),
+    INDEX idx_transferencia_cuenta_origen (cuenta_origen_id),
+    INDEX idx_transferencia_cuenta_destino (cuenta_destino_id),
+    INDEX idx_transferencia_estado (estado),
+    INDEX idx_transferencia_saga_id (saga_id),
+
+    CONSTRAINT chk_transferencia_monto CHECK (monto > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE limite_transaccional (
+    id                  BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cliente_id          BIGINT          NOT NULL,                 -- referencia cross-DB a ms_cliente_db
+    tipo_limite         VARCHAR(20)     NOT NULL,                 -- DIARIO | MENSUAL
+    monto_limite        DECIMAL(15,2)   NOT NULL,
+    monto_usado         DECIMAL(15,2)   NOT NULL DEFAULT 0.00,
+    fecha_referencia    DATE            NOT NULL,                 -- día (DIARIO) o primer día del mes (MENSUAL)
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion  TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    UNIQUE KEY uk_limite_cliente_tipo_fecha (cliente_id, tipo_limite, fecha_referencia),
+    INDEX idx_limite_cliente (cliente_id),
+
+    CONSTRAINT chk_limite_monto_usado CHECK (monto_usado >= 0 AND monto_usado <= monto_limite)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE movimiento (
+    id                       BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    transferencia_id         BIGINT          NOT NULL,
+    cliente_id               BIGINT          NOT NULL,            -- dueño de este renglón del historial
+    cuenta_id                BIGINT          NOT NULL,
+    tipo_movimiento          VARCHAR(20)     NOT NULL,             -- ENVIADO | RECIBIDO
+    contraparte_nombre       VARCHAR(200)    NOT NULL,             -- snapshot, no join
+    contraparte_cuenta_mask  VARCHAR(30)     NOT NULL,             -- ej. ********7839
+    monto                    DECIMAL(15,2)   NOT NULL,
+    concepto                 VARCHAR(200)    NULL,
+    fecha_movimiento         TIMESTAMP       NOT NULL,
+
+    INDEX idx_movimiento_cliente (cliente_id, fecha_movimiento),
+    INDEX idx_movimiento_cuenta (cuenta_id),
+    INDEX idx_movimiento_transferencia (transferencia_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE outbox_event (
+    id                  BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    aggregate_type      VARCHAR(50)     NOT NULL,                 -- ej. 'TRANSFERENCIA'
+    aggregate_id        BIGINT          NOT NULL,
+    tipo_evento         VARCHAR(50)     NOT NULL,                 -- ej. 'TRANSFERENCIA_COMPLETADA'
+    payload             JSON            NOT NULL,
+    publicado           BOOLEAN         NOT NULL DEFAULT FALSE,
+    fecha_creacion      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_publicacion   TIMESTAMP       NULL,
+
+    INDEX idx_outbox_publicado (publicado, fecha_creacion)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
