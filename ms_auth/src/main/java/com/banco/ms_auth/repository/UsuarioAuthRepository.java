@@ -6,6 +6,7 @@ import reactor.core.publisher.Mono;
 
 public interface UsuarioAuthRepository extends ReactiveCrudRepository<UsuarioAuth, Long> {
 
-    // Clave para la idempotencia: si el evento se reprocesa, no duplicamos el usuario_auth
     Mono<Boolean> existsByClienteId(Long clienteId);
+
+    Mono<UsuarioAuth> findByUsername(String username);
 }

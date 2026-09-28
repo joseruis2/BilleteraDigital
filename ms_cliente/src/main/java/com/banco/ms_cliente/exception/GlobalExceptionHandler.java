@@ -28,4 +28,11 @@ public class GlobalExceptionHandler {
         pd.setTitle("Error de validación");
         return Mono.just(pd);
     }
+
+    @ExceptionHandler(ClienteNoEncontradoException.class)
+    public Mono<ProblemDetail> handleClienteNoEncontrado(ClienteNoEncontradoException ex) {
+        ProblemDetail pd = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
+        pd.setTitle("Cliente no encontrado");
+        return Mono.just(pd);
+    }
 }

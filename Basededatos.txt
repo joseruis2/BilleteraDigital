@@ -121,6 +121,17 @@ CREATE TABLE cuenta (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
+CREATE TABLE operacion_saga (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    referencia VARCHAR(255) NOT NULL,
+    tipo_operacion VARCHAR(50) NOT NULL,
+    cuenta_id BIGINT NOT NULL,
+    monto DECIMAL(19,2) NOT NULL,
+    saldo_resultante DECIMAL(19,2) NOT NULL,
+    fecha_creacion DATETIME NOT NULL,
+    CONSTRAINT uq_operacion_saga_ref_tipo UNIQUE (referencia, tipo_operacion),
+    CONSTRAINT fk_operacion_saga_cuenta FOREIGN KEY (cuenta_id) REFERENCES cuenta(id)
+);
 -- ============================================================================
 -- ms_pagos_db
 -- ============================================================================
@@ -194,6 +205,17 @@ CREATE TABLE outbox_event (
 
     INDEX idx_outbox_publicado (publicado, fecha_creacion)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+
+ALTER TABLE transferencia
+    ADD COLUMN cliente_origen_id BIGINT NOT NULL AFTER cuenta_origen_id;
+ CREATE INDEX idx_transferencia_cliente_origen_fecha
+    ON transferencia (cliente_origen_id, fecha_creacion DESC);
+
+
+
 
 
 

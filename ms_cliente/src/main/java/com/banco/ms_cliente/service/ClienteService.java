@@ -6,6 +6,7 @@ import com.banco.ms_cliente.dto.response.ClienteResponse;
 import com.banco.ms_cliente.entity.Cliente;
 import com.banco.ms_cliente.entity.OutboxEvent;
 import com.banco.ms_cliente.event.ClienteRegistradoPayload;
+import com.banco.ms_cliente.exception.ClienteNoEncontradoException;
 import com.banco.ms_cliente.exception.ClienteYaExisteException;
 import com.banco.ms_cliente.mapper.ClienteMapper;
 import com.banco.ms_cliente.repository.ClienteRepository;
@@ -96,5 +97,12 @@ public class ClienteService {
 
     private String generarCodigoUnico() {
         return "CLI" + UUID.randomUUID().toString().replace("-", "").substring(0, 12).toUpperCase();
+    }
+
+    public Mono<ClienteResponse> obtenerPerfil(Long clienteId) {
+        return clienteRepository.findById(clienteId)
+                .switchIfEmpty(Mono.error(new ClienteNoEncontradoException(
+                        "No existe el cliente " + clienteId)))
+                .map(clienteMapper::toResponse);
     }
 }

@@ -64,6 +64,12 @@
             <artifactId>flyway-core</artifactId>
         </dependency>
 
+        <!-- ===== Validacion de DTOs ===== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
         <!-- ===== Kafka: consumir CLIENTE_REGISTRADO ===== -->
         <dependency>
             <groupId>org.springframework.kafka</groupId>
@@ -95,6 +101,15 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <!-- ===== Testing ===== -->

@@ -10,4 +10,7 @@ public interface LimiteTransaccionalRepository extends ReactiveCrudRepository<Li
 
     Mono<Boolean> existsByClienteIdAndTipoLimiteAndFechaReferencia(
             Long clienteId, String tipoLimite, LocalDate fechaReferencia);
+
+    Mono<LimiteTransaccional> findByClienteIdAndTipoLimiteAndFechaReferencia(
+            Long clienteId, String tipoLimite, LocalDate fechaReferencia);
 }

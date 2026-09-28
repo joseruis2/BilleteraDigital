@@ -11,10 +11,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @Tag(name = "Clientes")
@@ -31,5 +30,13 @@ public class ClienteController {
     public Mono<ResponseEntity<ClienteResponse>> registrar(@Valid @RequestBody ClienteRegistroRequest request) {
         return clienteService.registrarCliente(request)
                 .map(response -> ResponseEntity.status(HttpStatus.CREATED).body(response));
+    }
+
+    @Operation(summary = "Obtiene los datos del cliente autenticado")
+    @GetMapping("/me")
+    public Mono<ClienteResponse> obtenerPerfil(JwtAuthenticationToken authentication) {
+        Jwt jwt = (Jwt) authentication.getPrincipal();
+        Long clienteId = jwt.getClaim("clienteId");
+        return clienteService.obtenerPerfil(clienteId);
     }
 }
