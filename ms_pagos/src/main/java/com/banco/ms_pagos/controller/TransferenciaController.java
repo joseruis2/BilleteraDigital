@@ -2,17 +2,21 @@ package com.banco.ms_pagos.controller;
 
 
 import com.banco.ms_pagos.dto.request.TransferenciaRequest;
+import com.banco.ms_pagos.dto.response.DestinatarioResponse;
 import com.banco.ms_pagos.dto.response.HistorialTransferenciaResponse;
 import com.banco.ms_pagos.dto.response.TransferenciaResponse;
-import com.banco.ms_pagos.repository.LimiteTransaccionalRepository;
-import com.banco.ms_pagos.repository.TransferenciaRepository;
+import com.banco.ms_pagos.service.DestinatarioService;
 import com.banco.ms_pagos.service.TransferenciaOrchestratorService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.r2dbc.core.DatabaseClient;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -22,26 +26,27 @@ import reactor.core.publisher.Mono;
 public class TransferenciaController {
 
     private final TransferenciaOrchestratorService transferenciaOrchestratorService;
-    private final LimiteTransaccionalRepository limiteTransaccionalRepository;
-    private final DatabaseClient databaseClient;
-    private final TransferenciaRepository transferenciaRepository;
+    private final DestinatarioService destinatarioService;
 
     @PostMapping
     public Mono<TransferenciaResponse> transferir(@Valid @RequestBody TransferenciaRequest request,
                                                   JwtAuthenticationToken authentication) {
-        Long clienteId = extraerClienteId(authentication);
-        return transferenciaOrchestratorService.ejecutar(request, clienteId);
+        return transferenciaOrchestratorService.ejecutar(request, extraerClienteId(authentication));
     }
 
     @GetMapping("/historial")
     public Flux<HistorialTransferenciaResponse> historial(JwtAuthenticationToken authentication) {
-        Long clienteId = extraerClienteId(authentication);
-        return transferenciaOrchestratorService.obtenerHistorial(clienteId);
+        return transferenciaOrchestratorService.obtenerHistorial(extraerClienteId(authentication));
+    }
+
+    @GetMapping("/destinatario")
+    public Mono<DestinatarioResponse> buscarDestinatario(@RequestParam String numeroCuenta) {
+        return destinatarioService.buscarPorNumeroCuenta(numeroCuenta);
     }
 
     private Long extraerClienteId(JwtAuthenticationToken authentication) {
         Jwt jwt = (Jwt) authentication.getPrincipal();
-        Number clienteIdClaim = jwt.getClaim("clienteId");
-        return clienteIdClaim.longValue();
+        Number claim = jwt.getClaim("clienteId");
+        return claim.longValue();
     }
 }

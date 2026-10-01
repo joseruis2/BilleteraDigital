@@ -32,11 +32,9 @@ public class ClienteController {
                 .map(response -> ResponseEntity.status(HttpStatus.CREATED).body(response));
     }
 
-    @Operation(summary = "Obtiene los datos del cliente autenticado")
-    @GetMapping("/me")
-    public Mono<ClienteResponse> obtenerPerfil(JwtAuthenticationToken authentication) {
-        Jwt jwt = (Jwt) authentication.getPrincipal();
-        Long clienteId = jwt.getClaim("clienteId");
-        return clienteService.obtenerPerfil(clienteId);
+    @Operation(summary = "Obtiene los datos de un cliente por id (uso interno, solo ms-pagos)")
+    @GetMapping("/{id}")
+    public Mono<ClienteResponse> obtenerPorId(@PathVariable Long id) {
+        return clienteService.obtenerPerfil(id);
     }
 }

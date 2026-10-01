@@ -6,6 +6,7 @@ import com.banco.ms_cuentas.dto.response.CuentaResponse;
 import com.banco.ms_cuentas.dto.response.OperacionCuentaResponse;
 import com.banco.ms_cuentas.entity.Cuenta;
 import com.banco.ms_cuentas.exception.CuentaNoEncontradaException;
+import com.banco.ms_cuentas.exception.CuentaNoPerteneceAlClienteException;
 import com.banco.ms_cuentas.repository.CuentaRepository;
 import com.banco.ms_cuentas.service.CuentaOperacionService;
 import jakarta.validation.Valid;
@@ -76,5 +77,22 @@ public class CuentaController {
 
         return cuentaRepository.findByClienteId(clienteId)
                 .map(this::toResponse);
+    }
+
+    @GetMapping("/{id}/saldo")
+    public Mono<CuentaResponse> obtenerSaldoPropio(@PathVariable Long id, JwtAuthenticationToken authentication) {
+        Jwt jwt = (Jwt) authentication.getPrincipal();
+        Number clienteIdClaim = jwt.getClaim("clienteId");
+        Long clienteId = clienteIdClaim.longValue();
+
+        return cuentaRepository.findById(id)
+                .switchIfEmpty(Mono.error(new CuentaNoEncontradaException("No existe la cuenta " + id)))
+                .flatMap(cuenta -> {
+                    if (!cuenta.getClienteId().equals(clienteId)) {
+                        return Mono.error(new CuentaNoPerteneceAlClienteException(
+                                "La cuenta " + id + " no pertenece al cliente autenticado"));
+                    }
+                    return Mono.just(toResponse(cuenta));
+                });
     }
 }

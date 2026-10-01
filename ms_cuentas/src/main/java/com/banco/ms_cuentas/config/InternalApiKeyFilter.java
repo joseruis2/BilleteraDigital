@@ -12,13 +12,13 @@ import reactor.core.publisher.Mono;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
-import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Protege los endpoints INTERNOS de /api/cuentas/** (llamados solo por
  * ms-pagos) con una api key compartida. Los endpoints CARA AL CLIENTE
- * (como /mias) quedan excluidos aqui y se protegen en su lugar con JWT
- * de usuario, via Spring Security (ver SecurityConfig).
+ * (/mias y /{id}/saldo) quedan excluidos aqui y se protegen en su lugar
+ * con JWT de usuario, via Spring Security (ver SecurityConfig).
  */
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
@@ -27,9 +27,8 @@ public class InternalApiKeyFilter implements WebFilter {
     private static final String HEADER_NAME = "X-Internal-Api-Key";
 
     // Endpoints cara al cliente: se protegen con JWT, no con api key.
-    private static final List<String> RUTAS_EXCLUIDAS = List.of(
-            "/api/cuentas/mias"
-    );
+    private static final Pattern RUTA_MIAS = Pattern.compile("^/api/cuentas/mias$");
+    private static final Pattern RUTA_SALDO = Pattern.compile("^/api/cuentas/\\d+/saldo$");
 
     @Value("${internal.api-key}")
     private String apiKeyEsperada;
@@ -38,7 +37,10 @@ public class InternalApiKeyFilter implements WebFilter {
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         String path = exchange.getRequest().getPath().value();
 
-        if (!path.startsWith("/api/cuentas") || RUTAS_EXCLUIDAS.contains(path)) {
+        boolean esRutaCaraAlCliente = RUTA_MIAS.matcher(path).matches()
+                || RUTA_SALDO.matcher(path).matches();
+
+        if (!path.startsWith("/api/cuentas") || esRutaCaraAlCliente) {
             return chain.filter(exchange);
         }
 

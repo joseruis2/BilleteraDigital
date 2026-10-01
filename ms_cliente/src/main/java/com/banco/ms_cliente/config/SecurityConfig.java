@@ -19,6 +19,8 @@ public class SecurityConfig {
 
                 .authorizeExchange(exchange -> exchange
                         .pathMatchers("/api/clientes/registro").permitAll()
+                        .pathMatchers("/api/clientes/me").authenticated()
+                        .pathMatchers("/api/clientes/{id:[0-9]+}").permitAll()
                         .pathMatchers("/actuator/health/**").permitAll()
                         .pathMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .anyExchange().authenticated())

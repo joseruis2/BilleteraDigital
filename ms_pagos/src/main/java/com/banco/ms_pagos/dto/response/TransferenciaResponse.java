@@ -10,6 +10,7 @@ public record TransferenciaResponse(
         String concepto,
         Long cuentaOrigenId,
         Long cuentaDestinoId,
+        String nombreDestinatario,
         LocalDateTime fecha,
         String motivoFallo
 ) {

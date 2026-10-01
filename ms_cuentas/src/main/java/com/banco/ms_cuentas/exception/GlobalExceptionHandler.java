@@ -35,4 +35,11 @@ public class GlobalExceptionHandler {
         pd.setTitle("Error de validacion");
         return Mono.just(pd);
     }
+
+    @ExceptionHandler(CuentaNoPerteneceAlClienteException.class)
+    public Mono<ProblemDetail> handleCuentaNoPertenece(CuentaNoPerteneceAlClienteException ex) {
+        ProblemDetail pd = ProblemDetail.forStatusAndDetail(HttpStatus.FORBIDDEN, ex.getMessage());
+        pd.setTitle("Operación no autorizada");
+        return Mono.just(pd);
+    }
 }

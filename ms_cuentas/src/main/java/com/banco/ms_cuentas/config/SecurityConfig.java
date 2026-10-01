@@ -25,7 +25,7 @@ public class SecurityConfig {
                                 "/api/cuentas/buscar",
                                 "/api/cuentas/{id}").permitAll()
                         // Cara al cliente: exige JWT valido
-                        .pathMatchers("/api/cuentas/mias").authenticated()
+                        .pathMatchers("/api/cuentas/mias", "/api/cuentas/{id}/saldo").authenticated()
                         .anyExchange().authenticated())
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> {}))
                 .build();
