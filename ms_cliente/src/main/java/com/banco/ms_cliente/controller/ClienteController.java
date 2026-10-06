@@ -1,6 +1,5 @@
 package com.banco.ms_cliente.controller;
 
-
 import com.banco.ms_cliente.dto.Request.ClienteRegistroRequest;
 import com.banco.ms_cliente.dto.response.ClienteResponse;
 import com.banco.ms_cliente.service.ClienteService;
@@ -10,9 +9,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.oauth2.jwt.Jwt;
-import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
@@ -26,7 +22,6 @@ public class ClienteController {
 
     @Operation(summary = "Registra un cliente nuevo (dispara creación de auth y cuenta vía Kafka)")
     @PostMapping("/registro")
-    @PreAuthorize("permitAll()") // endpoint público, no requiere JWT
     public Mono<ResponseEntity<ClienteResponse>> registrar(@Valid @RequestBody ClienteRegistroRequest request) {
         return clienteService.registrarCliente(request)
                 .map(response -> ResponseEntity.status(HttpStatus.CREATED).body(response));

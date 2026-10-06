@@ -3,6 +3,7 @@ package com.banco.ms_auth.service;
 import com.banco.ms_auth.dto.request.LoginRequest;
 import com.banco.ms_auth.dto.response.LoginResponse;
 import com.banco.ms_auth.exception.CredencialesInvalidasException;
+import com.banco.ms_auth.mapper.AuthMapper;
 import com.banco.ms_auth.repository.UsuarioAuthRepository;
 import com.banco.ms_auth.security.JwtService;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +18,7 @@ public class AuthService {
     private final UsuarioAuthRepository usuarioAuthRepository;
     private final BCryptPasswordEncoder passwordEncoder;
     private final JwtService jwtService;
+    private final AuthMapper authMapper;
 
     public Mono<LoginResponse> login(LoginRequest request) {
         return usuarioAuthRepository.findByUsername(request.username())
@@ -30,13 +32,7 @@ public class AuthService {
                     }
 
                     String token = jwtService.generarToken(usuario);
-                    return Mono.just(new LoginResponse(
-                            "Bearer",
-                            token,
-                            jwtService.getExpiracionSegundos(),
-                            usuario.getUsername(),
-                            usuario.getRol()
-                    ));
+                    return Mono.just(authMapper.toLoginResponse(usuario, token, jwtService.getExpiracionSegundos()));
                 });
     }
 }

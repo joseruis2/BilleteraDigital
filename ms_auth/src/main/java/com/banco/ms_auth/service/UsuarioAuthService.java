@@ -2,7 +2,9 @@ package com.banco.ms_auth.service;
 
 import com.banco.ms_auth.entity.UsuarioAuth;
 import com.banco.ms_auth.event.ClienteRegistradoPayload;
+import com.banco.ms_auth.mapper.AuthMapper;
 import com.banco.ms_auth.repository.UsuarioAuthRepository;
+import com.banco.ms_auth.security.JwtService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
