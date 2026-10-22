@@ -1,0 +1,1460 @@
+2026-10-14 03:06:41.699 [sin-trace] INFO  com.banco.ms_auth.MsAuthApplication - Starting MsAuthApplication using Java 17.0.12 with PID 1424 (C:\Users\PCs\Desktop\BilleteraDigitalBanco\ms_auth\target\classes started by PCs in C:\Users\PCs\Desktop\BilleteraDigitalBanco\ms_auth)
+2026-10-14 03:06:41.703 [sin-trace] DEBUG com.banco.ms_auth.MsAuthApplication - Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-10-14 03:06:41.704 [sin-trace] INFO  com.banco.ms_auth.MsAuthApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-14 03:06:41.744 [sin-trace] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-14 03:06:41.745 [sin-trace] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-14 03:06:43.191 [sin-trace] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-10-14 03:06:43.366 [sin-trace] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 165 ms. Found 1 R2DBC repository interface.
+2026-10-14 03:06:43.752 [sin-trace] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=47415d9f-ee75-3ed2-aec0-c3c16073fd3e
+2026-10-14 03:06:44.390 [sin-trace] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-10-14 03:06:45.668 [sin-trace] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-10-14 03:06:46.809 [sin-trace] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/ms_auth_db (MySQL 8.4)
+2026-10-14 03:06:46.835 [sin-trace] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 8.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2026-10-14 03:06:46.882 [sin-trace] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.034s)
+2026-10-14 03:06:46.905 [sin-trace] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `ms_auth_db`: 1
+2026-10-14 03:06:46.909 [sin-trace] INFO  o.f.core.internal.command.DbMigrate - Schema `ms_auth_db` is up to date. No migration necessary.
+2026-10-14 03:06:47.316 [sin-trace] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-10-14 03:06:47.360 [sin-trace] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-14 03:06:47.454 [sin-trace] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-10-14 03:06:47.476 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-10-14 03:06:47.481 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 03:06:47.491 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-14 03:06:47.491 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-14 03:06:47.491 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-14 03:06:47.491 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-14 03:06:47.491 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-14 03:06:47.491 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-10-14 03:06:47.491 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-14 03:06:47.810 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-14 03:06:47.812 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-10-14 03:06:47.814 [sin-trace] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-14 03:06:47.816 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1791965207815 with initial instances count: 0
+2026-10-14 03:06:47.820 [sin-trace] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS-AUTH with eureka with status UP
+2026-10-14 03:06:47.821 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1791965207821, current=UP, previous=STARTING]
+2026-10-14 03:06:47.824 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082: registering service...
+2026-10-14 03:06:47.962 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - registration status: 204
+2026-10-14 03:06:48.047 [sin-trace] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8082 (http)
+2026-10-14 03:06:48.048 [sin-trace] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2026-10-14 03:06:48.506 [sin-trace] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ms-auth-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ms-auth-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-10-14 03:06:48.594 [sin-trace] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2026-10-14 03:06:48.746 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.2
+2026-10-14 03:06:48.746 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 5e9866f43ab8e7e4
+2026-10-14 03:06:48.746 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1791965208743
+2026-10-14 03:06:48.764 [sin-trace] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Subscribed to topic(s): cliente-registrado
+2026-10-14 03:06:48.801 [sin-trace] INFO  com.banco.ms_auth.MsAuthApplication - Started MsAuthApplication in 8.345 seconds (process running for 9.211)
+2026-10-14 03:06:49.318 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:49.320 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:49.320 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:49.427 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:49.427 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:49.427 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:49.580 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:49.580 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:49.580 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:49.802 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:49.802 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:49.803 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:50.192 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:50.193 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:50.193 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:51.062 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:51.063 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:51.063 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:52.063 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:52.063 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:52.063 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:52.950 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:52.950 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:52.950 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:53.951 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:53.952 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:53.952 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:54.959 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:54.959 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:54.959 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:55.893 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:55.893 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:55.893 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:56.813 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:56.814 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:56.814 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:57.874 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:57.874 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:57.874 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:58.892 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:58.892 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:58.893 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:06:59.947 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:06:59.948 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:06:59.948 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:00.813 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:00.814 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:00.814 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:01.829 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:01.829 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:01.829 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:02.761 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:02.762 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:02.762 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:03.762 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:03.762 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:03.762 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:04.787 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:04.788 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:04.788 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:05.728 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:05.728 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:05.728 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:06.674 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:06.675 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:06.676 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:07.676 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:07.677 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:07.677 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:08.720 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:08.720 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:07:08.720 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:09.740 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:09.742 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 1 due to node -1 being disconnected (elapsed time since creation: 56ms, elapsed time since send: 56ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:07:09.742 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:10.752 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:10.753 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 2 due to node -1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:07:10.753 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:11.843 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:11.844 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 3 due to node -1 being disconnected (elapsed time since creation: 8ms, elapsed time since send: 8ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:07:11.844 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:12.870 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:12.870 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 4 due to node -1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:07:12.870 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:13.717 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:13.718 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 5 due to node -1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:07:13.718 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:14.642 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:07:14.643 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 6 due to node -1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:07:14.643 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-14 03:07:15.743 [sin-trace] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cluster ID: R2FuZG9uZG9uZG9uZG9uZG8
+2026-10-14 03:07:15.755 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-10-14 03:07:15.759 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] (Re-)joining group
+2026-10-14 03:07:15.777 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Request joining group due to: need to re-join with the given member-id: consumer-ms-auth-group-1-ea0f0dbd-6b51-42c6-a4f2-0d17313e1f89
+2026-10-14 03:07:15.778 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] (Re-)joining group
+2026-10-14 03:07:17.814 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-14 03:07:17.814 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-14 03:07:17.814 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-14 03:07:17.814 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-14 03:07:17.814 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-14 03:07:17.814 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2026-10-14 03:07:17.814 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-14 03:07:17.840 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-14 03:07:18.782 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Successfully joined group with generation Generation{generationId=47, memberId='consumer-ms-auth-group-1-ea0f0dbd-6b51-42c6-a4f2-0d17313e1f89', protocol='range'}
+2026-10-14 03:07:18.790 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Finished assignment for group at generation 47: {consumer-ms-auth-group-1-ea0f0dbd-6b51-42c6-a4f2-0d17313e1f89=Assignment(partitions=[cliente-registrado-0])}
+2026-10-14 03:07:18.798 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Successfully synced group in generation Generation{generationId=47, memberId='consumer-ms-auth-group-1-ea0f0dbd-6b51-42c6-a4f2-0d17313e1f89', protocol='range'}
+2026-10-14 03:07:18.798 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Notifying assignor about the new Assignment(partitions=[cliente-registrado-0])
+2026-10-14 03:07:18.801 [sin-trace] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Adding newly assigned partitions: cliente-registrado-0
+2026-10-14 03:07:18.810 [sin-trace] INFO  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition cliente-registrado-0 to the committed offset FetchPosition{offset=35, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=22}}
+2026-10-14 03:07:18.811 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-auth-group: partitions assigned: [cliente-registrado-0]
+2026-10-14 03:07:34.348 [c113a179-114e-47c1-ac09-134ae2beafef] INFO  c.b.m.controller.AuthController - Procesando login para username=jose.ruiz
+2026-10-14 03:09:05.454 [sin-trace] INFO  c.b.m.s.ClienteRegistradoListener - Evento CLIENTE_REGISTRADO recibido: clienteId=9, username=tiofila
+2026-10-14 03:09:05.559 [sin-trace] INFO  c.b.m.service.UsuarioAuthService - usuario_auth creado para clienteId=9, username=tiofila
+2026-10-14 03:09:16.366 [cca9df47-95e9-4ef9-ba57-413d47268b27] INFO  c.b.m.controller.AuthController - Procesando login para username=tiofila
+2026-10-14 03:09:38.943 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node -1 disconnected.
+2026-10-14 03:09:38.945 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:38.945 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight FETCH request with correlation id 382 due to node 1 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:09:38.945 [sin-trace] INFO  o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Error sending fetch request (sessionId=744660698, epoch=314) to node 1:
+org.apache.kafka.common.errors.DisconnectException
+2026-10-14 03:09:38.948 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 2147483646 disconnected.
+2026-10-14 03:09:38.949 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2026-10-14 03:09:39.061 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:39.061 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 383 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:09:39.181 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:39.181 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 384 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:09:39.444 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:39.444 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 385 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:09:39.821 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:39.821 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 386 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 03:09:40.598 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:40.598 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:41.618 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:41.619 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:42.626 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:42.626 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:43.634 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:43.635 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:44.634 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:44.635 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:45.637 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:45.637 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:46.645 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:46.645 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:47.703 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:47.704 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:48.749 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:48.749 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:49.751 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:49.751 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:50.763 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:50.764 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:51.790 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:51.791 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:52.701 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:52.701 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:53.602 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:53.603 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:54.477 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:54.478 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:55.491 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:55.491 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:56.497 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:56.497 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:57.500 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:57.501 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:58.501 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:58.502 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:09:59.377 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:09:59.378 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:00.346 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:00.347 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:01.358 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:01.358 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:02.361 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:02.361 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:03.373 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:03.373 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:04.352 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:04.352 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:05.260 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:05.260 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:06.270 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:06.270 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:07.285 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:07.285 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:08.286 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:08.287 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:09.288 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:09.288 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:10.226 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:10.226 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:11.213 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:11.214 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:12.275 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:12.275 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:13.289 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:13.290 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:14.302 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:14.303 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:15.313 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:15.313 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:16.333 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:16.334 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:17.334 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:17.334 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:18.340 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:18.340 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:19.349 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:19.349 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:20.364 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:20.364 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:21.376 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:21.376 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:22.425 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:22.426 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:23.427 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:23.427 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:24.370 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:24.370 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:25.373 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 03:10:25.373 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 03:10:25.731 [sin-trace] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS-AUTH with eureka with status DOWN
+2026-10-14 03:10:25.731 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1791965425731, current=DOWN, previous=UP]
+2026-10-14 03:10:25.731 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082: registering service...
+2026-10-14 03:10:25.736 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:90)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 21 common frames omitted
+2026-10-14 03:10:25.736 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 03:10:25.752 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 common frames omitted
+2026-10-14 03:10:25.753 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 03:10:25.753 [sin-trace] WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-14 03:10:25.753 [sin-trace] WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-14 03:10:25.768 [sin-trace] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Revoke previously assigned partitions cliente-registrado-0
+2026-10-14 03:10:25.769 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-auth-group: partitions revoked: [cliente-registrado-0]
+2026-10-14 03:10:25.769 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-14 03:10:25.769 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Request joining group due to: consumer pro-actively leaving the group
+2026-10-14 03:10:25.769 [sin-trace] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Unsubscribed all topics or patterns and assigned partitions
+2026-10-14 03:10:25.770 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-14 03:10:25.770 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Request joining group due to: consumer pro-actively leaving the group
+2026-10-14 03:10:25.772 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2026-10-14 03:10:25.772 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-14 03:10:25.772 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-10-14 03:10:25.772 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2026-10-14 03:10:25.775 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ms-auth-group-1 unregistered
+2026-10-14 03:10:25.775 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-auth-group: Consumer stopped
+2026-10-14 03:10:25.776 [sin-trace] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-14 03:10:25.778 [sin-trace] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2026-10-14 03:10:25.794 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-10-14 03:10:28.798 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-10-14 03:10:28.831 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:934)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:915)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1506)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1499)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1243)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1204)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1150)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 40 common frames omitted
+2026-10-14 03:10:28.831 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 03:10:28.831 [sin-trace] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:934)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:915)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1506)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1499)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1243)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1204)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1150)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-14 03:10:28.832 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-10-14 20:30:59.268 [sin-trace] INFO  com.banco.ms_auth.MsAuthApplication - Starting MsAuthApplication using Java 17.0.12 with PID 21952 (C:\Users\PCs\Desktop\BilleteraDigitalBanco\ms_auth\target\classes started by PCs in C:\Users\PCs\Desktop\BilleteraDigitalBanco\ms_auth)
+2026-10-14 20:30:59.270 [sin-trace] DEBUG com.banco.ms_auth.MsAuthApplication - Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-10-14 20:30:59.271 [sin-trace] INFO  com.banco.ms_auth.MsAuthApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-14 20:30:59.306 [sin-trace] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-14 20:30:59.306 [sin-trace] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-14 20:31:00.410 [sin-trace] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-10-14 20:31:00.640 [sin-trace] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 222 ms. Found 1 R2DBC repository interface.
+2026-10-14 20:31:00.988 [sin-trace] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=47415d9f-ee75-3ed2-aec0-c3c16073fd3e
+2026-10-14 20:31:01.799 [sin-trace] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-10-14 20:31:03.700 [sin-trace] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-10-14 20:31:04.532 [sin-trace] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/ms_auth_db (MySQL 8.4)
+2026-10-14 20:31:04.565 [sin-trace] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 8.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2026-10-14 20:31:04.608 [sin-trace] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.033s)
+2026-10-14 20:31:04.625 [sin-trace] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `ms_auth_db`: 1
+2026-10-14 20:31:04.628 [sin-trace] INFO  o.f.core.internal.command.DbMigrate - Schema `ms_auth_db` is up to date. No migration necessary.
+2026-10-14 20:31:04.962 [sin-trace] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-10-14 20:31:05.007 [sin-trace] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-14 20:31:05.144 [sin-trace] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-10-14 20:31:05.171 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-10-14 20:31:05.176 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 20:31:05.188 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-14 20:31:05.188 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-14 20:31:05.188 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-14 20:31:05.188 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-14 20:31:05.188 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-14 20:31:05.188 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-10-14 20:31:05.188 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-14 20:31:05.536 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-14 20:31:05.538 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-10-14 20:31:05.541 [sin-trace] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-14 20:31:05.544 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1792027865543 with initial instances count: 0
+2026-10-14 20:31:05.550 [sin-trace] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS-AUTH with eureka with status UP
+2026-10-14 20:31:05.551 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792027865551, current=UP, previous=STARTING]
+2026-10-14 20:31:05.553 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082: registering service...
+2026-10-14 20:31:05.687 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - registration status: 204
+2026-10-14 20:31:05.756 [sin-trace] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8082 (http)
+2026-10-14 20:31:05.757 [sin-trace] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2026-10-14 20:31:06.158 [sin-trace] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ms-auth-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ms-auth-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-10-14 20:31:06.246 [sin-trace] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2026-10-14 20:31:06.416 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.2
+2026-10-14 20:31:06.416 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 5e9866f43ab8e7e4
+2026-10-14 20:31:06.416 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1792027866412
+2026-10-14 20:31:06.439 [sin-trace] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Subscribed to topic(s): cliente-registrado
+2026-10-14 20:31:06.480 [sin-trace] INFO  com.banco.ms_auth.MsAuthApplication - Started MsAuthApplication in 8.011 seconds (process running for 8.941)
+2026-10-14 20:31:07.164 [sin-trace] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cluster ID: R2FuZG9uZG9uZG9uZG9uZG8
+2026-10-14 20:31:07.166 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-10-14 20:31:07.169 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] (Re-)joining group
+2026-10-14 20:31:07.208 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Request joining group due to: need to re-join with the given member-id: consumer-ms-auth-group-1-2b5716f5-032f-418c-a454-a2ca270c36c1
+2026-10-14 20:31:07.208 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] (Re-)joining group
+2026-10-14 20:31:10.244 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Successfully joined group with generation Generation{generationId=49, memberId='consumer-ms-auth-group-1-2b5716f5-032f-418c-a454-a2ca270c36c1', protocol='range'}
+2026-10-14 20:31:10.259 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Finished assignment for group at generation 49: {consumer-ms-auth-group-1-2b5716f5-032f-418c-a454-a2ca270c36c1=Assignment(partitions=[cliente-registrado-0])}
+2026-10-14 20:31:10.289 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Successfully synced group in generation Generation{generationId=49, memberId='consumer-ms-auth-group-1-2b5716f5-032f-418c-a454-a2ca270c36c1', protocol='range'}
+2026-10-14 20:31:10.290 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Notifying assignor about the new Assignment(partitions=[cliente-registrado-0])
+2026-10-14 20:31:10.294 [sin-trace] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Adding newly assigned partitions: cliente-registrado-0
+2026-10-14 20:31:10.322 [sin-trace] INFO  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition cliente-registrado-0 to the committed offset FetchPosition{offset=36, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=24}}
+2026-10-14 20:31:10.324 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-auth-group: partitions assigned: [cliente-registrado-0]
+2026-10-14 20:31:35.540 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-14 20:31:35.540 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-14 20:31:35.540 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-14 20:31:35.540 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-14 20:31:35.540 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-14 20:31:35.541 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2026-10-14 20:31:35.541 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-14 20:31:35.565 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-14 20:31:39.242 [ee38ae97-84b9-457f-a6f1-59f54328ae34] INFO  c.b.m.controller.AuthController - Procesando login para username=jose.ruiz
+2026-10-14 20:31:51.678 [b8fc6cb0-5a9b-4179-b40f-e144c4130c6d] INFO  c.b.m.controller.AuthController - Procesando login para username=jose.ruiz
+2026-10-14 20:36:05.203 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 20:41:05.206 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 20:46:05.216 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 20:51:05.228 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 20:56:05.233 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:01:05.237 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:06:05.248 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:11:07.248 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:16:07.254 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:21:07.269 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:26:07.273 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:31:07.285 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:36:07.290 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:41:07.294 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:46:07.303 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:51:07.314 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 21:56:07.324 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:01:07.334 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:06:07.335 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:11:07.348 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:16:07.349 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:21:07.361 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:26:07.375 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:31:07.388 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:36:07.401 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:41:07.411 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:46:07.415 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:51:07.429 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:56:07.431 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-14 22:56:09.999 [b1eb0d45-0983-47df-9b37-f172ed449074] INFO  c.b.m.controller.AuthController - Procesando login para username=jose.ruiz
+2026-10-14 22:57:32.973 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 2147483646 disconnected.
+2026-10-14 22:57:32.973 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2026-10-14 22:57:32.986 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:32.986 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight FETCH request with correlation id 20487 due to node 1 being disconnected (elapsed time since creation: 55ms, elapsed time since send: 55ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 22:57:32.987 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight FIND_COORDINATOR request with correlation id 20488 due to node 1 being disconnected (elapsed time since creation: 13ms, elapsed time since send: 13ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 22:57:33.000 [sin-trace] INFO  o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Error sending fetch request (sessionId=17770686, epoch=17493) to node 1:
+org.apache.kafka.common.errors.DisconnectException
+2026-10-14 22:57:33.134 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:33.134 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 20489 due to node 1 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 22:57:33.357 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:33.358 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 20490 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 22:57:33.754 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:33.754 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 20491 due to node 1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 22:57:34.836 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:34.837 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 20492 due to node 1 being disconnected (elapsed time since creation: 203ms, elapsed time since send: 203ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-14 22:57:35.793 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:35.795 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:36.799 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:36.800 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:37.815 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:37.815 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:38.818 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:38.818 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:39.825 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:39.826 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:40.834 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:40.834 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:41.842 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:41.842 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:42.809 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:42.809 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:43.854 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:43.854 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:44.902 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:44.902 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:45.909 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:45.910 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:46.910 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:46.910 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:47.920 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:47.920 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:48.919 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:48.920 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:49.881 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:49.881 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:50.894 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:50.895 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:51.878 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:51.879 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:52.890 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:52.890 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:53.892 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:53.892 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:54.935 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:54.937 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:55.947 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:55.947 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:56.976 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:56.976 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:57.934 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:57.934 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:58.925 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:58.926 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:57:59.949 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:57:59.949 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:00.961 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:00.961 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:01.972 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:01.974 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:02.984 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:02.984 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:03.995 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:03.995 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:05.007 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:05.007 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:06.052 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:06.052 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:07.056 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:07.056 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:08.071 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:08.071 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:09.086 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:09.086 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:10.130 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:10.130 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:11.141 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:11.141 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:12.144 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:12.144 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:13.124 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:13.124 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:14.079 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:14.080 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:14.728 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:90)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:860)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1418)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 19 common frames omitted
+2026-10-14 22:58:14.729 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 22:58:14.739 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:860)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1418)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 20 common frames omitted
+2026-10-14 22:58:14.740 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 22:58:14.740 [sin-trace] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:860)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1418)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-14 22:58:14.752 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:90)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1095)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:978)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1489)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1457)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 common frames omitted
+2026-10-14 22:58:14.753 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 22:58:14.770 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1095)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:978)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1489)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1457)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 23 common frames omitted
+2026-10-14 22:58:14.771 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 22:58:14.773 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1095)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:978)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1489)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1457)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-14 22:58:14.965 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:14.966 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:15.907 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:15.907 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:16.921 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-14 22:58:16.921 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-14 22:58:16.946 [sin-trace] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS-AUTH with eureka with status DOWN
+2026-10-14 22:58:16.946 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792036696946, current=DOWN, previous=UP]
+2026-10-14 22:58:16.946 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082: registering service...
+2026-10-14 22:58:16.951 [sin-trace] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Revoke previously assigned partitions cliente-registrado-0
+2026-10-14 22:58:16.952 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-auth-group: partitions revoked: [cliente-registrado-0]
+2026-10-14 22:58:16.952 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-14 22:58:16.952 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Request joining group due to: consumer pro-actively leaving the group
+2026-10-14 22:58:16.952 [sin-trace] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Unsubscribed all topics or patterns and assigned partitions
+2026-10-14 22:58:16.955 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-14 22:58:16.955 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Request joining group due to: consumer pro-actively leaving the group
+2026-10-14 22:58:16.958 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2026-10-14 22:58:16.958 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-14 22:58:16.958 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-10-14 22:58:16.958 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2026-10-14 22:58:16.963 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ms-auth-group-1 unregistered
+2026-10-14 22:58:16.964 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-auth-group: Consumer stopped
+2026-10-14 22:58:16.965 [sin-trace] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-14 22:58:16.968 [sin-trace] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2026-10-14 22:58:16.968 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 common frames omitted
+2026-10-14 22:58:16.968 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-AUTH": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 22:58:16.968 [sin-trace] WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-14 22:58:16.969 [sin-trace] WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-14 22:58:16.984 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-10-14 22:58:19.987 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-10-14 22:58:19.993 [sin-trace] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:934)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:915)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1506)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1499)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1243)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1204)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1150)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:226)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:497)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:168)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:88)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 40 common frames omitted
+2026-10-14 22:58:19.993 [sin-trace] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/MS-AUTH/PC:ms-auth:8082": Connect to http://localhost:8761 failed: Connection refused: no further information
+2026-10-14 22:58:19.993 [sin-trace] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:934)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:915)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:203)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:196)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1506)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1499)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1243)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1204)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1150)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-10-14 22:58:19.993 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

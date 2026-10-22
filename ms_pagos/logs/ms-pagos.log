@@ -1,0 +1,169 @@
+2026-10-21 01:50:55.516 [sin-trace] INFO  c.banco.ms_pagos.MsPagosApplication - Starting MsPagosApplication using Java 17.0.12 with PID 22692 (C:\Users\PCs\Desktop\BilleteraDigitalBanco\ms_pagos\target\classes started by PCs in C:\Users\PCs\Desktop\BilleteraDigitalBanco\ms_pagos)
+2026-10-21 01:50:55.521 [sin-trace] DEBUG c.banco.ms_pagos.MsPagosApplication - Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-10-21 01:50:55.521 [sin-trace] INFO  c.banco.ms_pagos.MsPagosApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-21 01:50:55.558 [sin-trace] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-21 01:50:55.559 [sin-trace] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-21 01:50:56.432 [sin-trace] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-10-21 01:50:56.534 [sin-trace] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 2 R2DBC repository interfaces.
+2026-10-21 01:50:56.735 [sin-trace] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=68c67601-5062-35cc-bc03-d1a0c645a57d
+2026-10-21 01:50:57.237 [sin-trace] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-10-21 01:50:57.913 [sin-trace] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-10-21 01:50:58.348 [sin-trace] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/ms_pagos_db (MySQL 8.4)
+2026-10-21 01:50:58.358 [sin-trace] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 8.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2026-10-21 01:50:58.387 [sin-trace] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.022s)
+2026-10-21 01:50:58.399 [sin-trace] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `ms_pagos_db`: 1
+2026-10-21 01:50:58.401 [sin-trace] INFO  o.f.core.internal.command.DbMigrate - Schema `ms_pagos_db` is up to date. No migration necessary.
+2026-10-21 01:50:58.668 [sin-trace] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-10-21 01:50:58.701 [sin-trace] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-21 01:50:58.758 [sin-trace] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-10-21 01:50:58.775 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-10-21 01:50:58.779 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 01:50:58.786 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-21 01:50:58.786 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-21 01:50:58.786 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-21 01:50:58.786 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-21 01:50:58.786 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-21 01:50:58.786 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-10-21 01:50:58.786 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-21 01:50:58.981 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-21 01:50:58.982 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-10-21 01:50:58.984 [sin-trace] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-21 01:50:58.991 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1792565458990 with initial instances count: 0
+2026-10-21 01:50:58.994 [sin-trace] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS-PAGOS with eureka with status UP
+2026-10-21 01:50:58.994 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792565458994, current=UP, previous=STARTING]
+2026-10-21 01:50:59.000 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-PAGOS/PC:ms-pagos:8084: registering service...
+2026-10-21 01:50:59.025 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-PAGOS/PC:ms-pagos:8084 - registration status: 204
+2026-10-21 01:50:59.115 [sin-trace] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8084 (http)
+2026-10-21 01:50:59.116 [sin-trace] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8084
+2026-10-21 01:50:59.380 [sin-trace] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ms-pagos-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ms-pagos-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-10-21 01:50:59.413 [sin-trace] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2026-10-21 01:50:59.497 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.2
+2026-10-21 01:50:59.497 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 5e9866f43ab8e7e4
+2026-10-21 01:50:59.497 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1792565459496
+2026-10-21 01:50:59.505 [sin-trace] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Subscribed to topic(s): cliente-registrado
+2026-10-21 01:50:59.522 [sin-trace] INFO  c.banco.ms_pagos.MsPagosApplication - Started MsPagosApplication in 4.658 seconds (process running for 5.279)
+2026-10-21 01:50:59.804 [sin-trace] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Cluster ID: R2FuZG9uZG9uZG9uZG9uZG8
+2026-10-21 01:50:59.805 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-10-21 01:50:59.806 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] (Re-)joining group
+2026-10-21 01:50:59.819 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Request joining group due to: need to re-join with the given member-id: consumer-ms-pagos-group-1-5f83c423-df99-4c10-9655-a41ad304135d
+2026-10-21 01:50:59.820 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] (Re-)joining group
+2026-10-21 01:51:02.822 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Successfully joined group with generation Generation{generationId=50, memberId='consumer-ms-pagos-group-1-5f83c423-df99-4c10-9655-a41ad304135d', protocol='range'}
+2026-10-21 01:51:02.828 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Finished assignment for group at generation 50: {consumer-ms-pagos-group-1-5f83c423-df99-4c10-9655-a41ad304135d=Assignment(partitions=[cliente-registrado-0])}
+2026-10-21 01:51:02.833 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Successfully synced group in generation Generation{generationId=50, memberId='consumer-ms-pagos-group-1-5f83c423-df99-4c10-9655-a41ad304135d', protocol='range'}
+2026-10-21 01:51:02.833 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Notifying assignor about the new Assignment(partitions=[cliente-registrado-0])
+2026-10-21 01:51:02.835 [sin-trace] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ms-pagos-group-1, groupId=ms-pagos-group] Adding newly assigned partitions: cliente-registrado-0
+2026-10-21 01:51:02.842 [sin-trace] INFO  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition cliente-registrado-0 to the committed offset FetchPosition{offset=36, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=28}}
+2026-10-21 01:51:02.843 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-pagos-group: partitions assigned: [cliente-registrado-0]
+2026-10-21 01:51:28.992 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-21 01:51:28.993 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-21 01:51:28.993 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-21 01:51:28.993 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-21 01:51:28.993 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-21 01:51:28.993 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2026-10-21 01:51:28.994 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-21 01:51:29.017 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-21 01:55:58.796 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 01:57:00.399 [59e60aa0-7d3b-4bda-a5d6-e93a1b8523c3] INFO  c.b.m.s.TransferenciaOrchestratorService - Transferencia TRF73E0D75BBE41 completada
+2026-10-21 02:00:58.803 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 02:05:58.807 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 02:10:58.821 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 02:15:58.830 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

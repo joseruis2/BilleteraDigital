@@ -1,0 +1,57 @@
+2026-10-16 00:04:59.941 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:09:59.955 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:14:59.961 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:19:59.966 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:24:59.978 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:29:59.991 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:34:59.994 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:40:00.002 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:45:00.009 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:50:00.018 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:55:00.033 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:00:00.049 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:05:00.050 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:10:00.052 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:15:00.052 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:20:00.062 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:25:00.070 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:30:00.080 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:35:00.094 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:40:00.108 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:45:00.117 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:50:00.122 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:55:00.128 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:00:00.139 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:05:00.143 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:10:00.144 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:15:00.151 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:20:00.153 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:25:00.167 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:30:00.168 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:35:00.179 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:40:00.184 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:45:00.186 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:48:34.533 [sin-trace] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS-CUENTAS with eureka with status DOWN
+2026-10-16 02:48:34.534 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792136914534, current=DOWN, previous=UP]
+2026-10-16 02:48:34.534 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CUENTAS/PC:ms-cuentas:8083: registering service...
+2026-10-16 02:48:34.539 [sin-trace] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ms-cuentas-group-1, groupId=ms-cuentas-group] Revoke previously assigned partitions cliente-registrado-0
+2026-10-16 02:48:34.541 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-cuentas-group: partitions revoked: [cliente-registrado-0]
+2026-10-16 02:48:34.542 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-cuentas-group-1, groupId=ms-cuentas-group] Member consumer-ms-cuentas-group-1-f0855c9d-be9b-499e-8b42-7ebd2ff0ca0f sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-10-16 02:48:34.542 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-cuentas-group-1, groupId=ms-cuentas-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-16 02:48:34.543 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-cuentas-group-1, groupId=ms-cuentas-group] Request joining group due to: consumer pro-actively leaving the group
+2026-10-16 02:48:34.543 [sin-trace] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ms-cuentas-group-1, groupId=ms-cuentas-group] Unsubscribed all topics or patterns and assigned partitions
+2026-10-16 02:48:34.545 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CUENTAS/PC:ms-cuentas:8083 - registration status: 204
+2026-10-16 02:48:34.546 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-cuentas-group-1, groupId=ms-cuentas-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-16 02:48:34.546 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-cuentas-group-1, groupId=ms-cuentas-group] Request joining group due to: consumer pro-actively leaving the group
+2026-10-16 02:48:34.682 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2026-10-16 02:48:34.682 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-16 02:48:34.682 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-10-16 02:48:34.682 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2026-10-16 02:48:34.686 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ms-cuentas-group-1 unregistered
+2026-10-16 02:48:34.687 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-cuentas-group: Consumer stopped
+2026-10-16 02:48:34.689 [sin-trace] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16 02:48:34.691 [sin-trace] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2026-10-16 02:48:34.712 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-10-16 02:48:37.719 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-10-16 02:48:37.735 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CUENTAS/PC:ms-cuentas:8083 - deregister  status: 200
+2026-10-16 02:48:37.735 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

@@ -1,0 +1,52 @@
+2026-10-21 01:50:41.176 [sin-trace] INFO  c.b.ms_cliente.MsClienteApplication - Starting MsClienteApplication using Java 17.0.12 with PID 23808 (C:\Users\PCs\Desktop\BilleteraDigitalBanco\ms_cliente\target\classes started by PCs in C:\Users\PCs\Desktop\BilleteraDigitalBanco\ms_cliente)
+2026-10-21 01:50:41.180 [sin-trace] DEBUG c.b.ms_cliente.MsClienteApplication - Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-10-21 01:50:41.180 [sin-trace] INFO  c.b.ms_cliente.MsClienteApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-21 01:50:41.211 [sin-trace] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-21 01:50:41.212 [sin-trace] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-21 01:50:42.221 [sin-trace] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2026-10-21 01:50:42.323 [sin-trace] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 2 R2DBC repository interfaces.
+2026-10-21 01:50:42.560 [sin-trace] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7a53753c-1f73-307e-802c-28283f42d40a
+2026-10-21 01:50:43.004 [sin-trace] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-10-21 01:50:43.883 [sin-trace] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+2026-10-21 01:50:44.418 [sin-trace] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:mysql://localhost:3306/ms_cliente_db (MySQL 8.4)
+2026-10-21 01:50:44.429 [sin-trace] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: MySQL 8.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is 8.1.
+2026-10-21 01:50:44.460 [sin-trace] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.023s)
+2026-10-21 01:50:44.474 [sin-trace] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `ms_cliente_db`: 1
+2026-10-21 01:50:44.477 [sin-trace] INFO  o.f.core.internal.command.DbMigrate - Schema `ms_cliente_db` is up to date. No migration necessary.
+2026-10-21 01:50:44.726 [sin-trace] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2026-10-21 01:50:44.757 [sin-trace] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-21 01:50:44.802 [sin-trace] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-10-21 01:50:44.822 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-10-21 01:50:44.827 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 01:50:44.834 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-21 01:50:44.834 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-21 01:50:44.834 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-21 01:50:44.835 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-21 01:50:44.835 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-21 01:50:44.835 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-10-21 01:50:44.835 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-21 01:50:45.084 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-21 01:50:45.086 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-10-21 01:50:45.088 [sin-trace] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-21 01:50:45.088 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1792565445088 with initial instances count: 0
+2026-10-21 01:50:45.092 [sin-trace] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS-CLIENTE with eureka with status UP
+2026-10-21 01:50:45.092 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792565445092, current=UP, previous=STARTING]
+2026-10-21 01:50:45.093 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CLIENTE/PC:ms-cliente:8081: registering service...
+2026-10-21 01:50:45.119 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-CLIENTE/PC:ms-cliente:8081 - registration status: 204
+2026-10-21 01:50:45.216 [sin-trace] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8081 (http)
+2026-10-21 01:50:45.217 [sin-trace] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8081
+2026-10-21 01:50:45.441 [sin-trace] INFO  c.b.ms_cliente.MsClienteApplication - Started MsClienteApplication in 4.881 seconds (process running for 5.461)
+2026-10-21 01:51:15.089 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-21 01:51:15.089 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-21 01:51:15.089 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-21 01:51:15.089 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-21 01:51:15.089 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-21 01:51:15.089 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2026-10-21 01:51:15.089 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-21 01:51:15.111 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-21 01:55:44.840 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 02:00:44.851 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 02:05:44.862 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 02:10:44.863 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 02:15:44.874 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-21 02:20:44.890 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

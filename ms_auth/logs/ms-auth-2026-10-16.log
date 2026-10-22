@@ -1,0 +1,82 @@
+2026-10-16 00:00:10.722 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:05:10.732 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:10:10.742 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:15:10.750 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:20:10.757 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:25:10.770 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:30:10.786 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:35:10.798 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:40:10.811 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:45:10.823 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:50:10.846 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 00:55:10.847 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:00:10.854 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:05:10.858 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:10:10.872 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:15:10.880 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:20:10.893 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:25:10.894 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:30:10.908 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:35:10.912 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:40:10.921 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:45:10.936 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:50:10.942 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 01:55:10.952 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:00:10.965 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:05:10.976 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:10:10.979 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:15:10.989 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:20:10.998 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:25:11.000 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:30:11.009 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:35:11.025 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:40:11.038 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:45:11.045 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:50:11.053 [sin-trace] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-16 02:50:55.881 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:50:55.881 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight FETCH request with correlation id 53087 due to node 1 being disconnected (elapsed time since creation: 10ms, elapsed time since send: 10ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-16 02:50:55.881 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 2147483646 disconnected.
+2026-10-16 02:50:55.882 [sin-trace] INFO  o.a.k.clients.FetchSessionHandler - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Error sending fetch request (sessionId=611480709, epoch=45338) to node 1:
+org.apache.kafka.common.errors.DisconnectException
+2026-10-16 02:50:55.882 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2026-10-16 02:50:55.984 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:50:55.984 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 53088 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-16 02:50:56.092 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:50:56.093 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 53089 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-16 02:50:56.278 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:50:56.278 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 53090 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-16 02:50:56.708 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:50:56.708 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 53091 due to node 1 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-16 02:50:57.447 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:50:57.448 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Cancelled in-flight API_VERSIONS request with correlation id 53092 due to node 1 being disconnected (elapsed time since creation: 59ms, elapsed time since send: 59ms, throttle time: 0ms, request timeout: 30000ms)
+2026-10-16 02:50:58.462 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:50:58.462 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-16 02:50:59.462 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:50:59.462 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-16 02:51:00.475 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:51:00.475 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-16 02:51:01.482 [sin-trace] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Node 1 disconnected.
+2026-10-16 02:51:01.482 [sin-trace] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-16 02:51:02.071 [sin-trace] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS-AUTH with eureka with status DOWN
+2026-10-16 02:51:02.072 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792137062072, current=DOWN, previous=UP]
+2026-10-16 02:51:02.072 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082: registering service...
+2026-10-16 02:51:02.078 [sin-trace] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Revoke previously assigned partitions cliente-registrado-0
+2026-10-16 02:51:02.079 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-auth-group: partitions revoked: [cliente-registrado-0]
+2026-10-16 02:51:02.080 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-16 02:51:02.080 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Request joining group due to: consumer pro-actively leaving the group
+2026-10-16 02:51:02.080 [sin-trace] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Unsubscribed all topics or patterns and assigned partitions
+2026-10-16 02:51:02.083 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-16 02:51:02.083 [sin-trace] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-ms-auth-group-1, groupId=ms-auth-group] Request joining group due to: consumer pro-actively leaving the group
+2026-10-16 02:51:02.086 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2026-10-16 02:51:02.086 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-16 02:51:02.086 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-10-16 02:51:02.086 [sin-trace] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2026-10-16 02:51:02.091 [sin-trace] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-ms-auth-group-1 unregistered
+2026-10-16 02:51:02.093 [sin-trace] INFO  o.s.k.l.KafkaMessageListenerContainer - ms-auth-group: Consumer stopped
+2026-10-16 02:51:02.093 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - registration status: 204
+2026-10-16 02:51:02.095 [sin-trace] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-16 02:51:02.098 [sin-trace] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete
+2026-10-16 02:51:02.120 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-10-16 02:51:05.133 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-10-16 02:51:05.149 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS-AUTH/PC:ms-auth:8082 - deregister  status: 200
+2026-10-16 02:51:05.149 [sin-trace] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

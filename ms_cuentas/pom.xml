@@ -82,6 +82,11 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>context-propagation</artifactId>
+        </dependency>
+
         <!-- ===== Actuator ===== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

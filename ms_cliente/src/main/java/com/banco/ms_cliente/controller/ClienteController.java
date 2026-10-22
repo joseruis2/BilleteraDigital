@@ -9,6 +9,8 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
@@ -31,5 +33,12 @@ public class ClienteController {
     @GetMapping("/{id}")
     public Mono<ClienteResponse> obtenerPorId(@PathVariable Long id) {
         return clienteService.obtenerPerfil(id);
+    }
+
+    @GetMapping("/me")
+    public Mono<ClienteResponse> obtenerPerfil(JwtAuthenticationToken authentication) {
+        Jwt jwt = (Jwt) authentication.getPrincipal();
+        Number clienteId = jwt.getClaim("clienteId");
+        return clienteService.obtenerPerfil(clienteId.longValue());
     }
 }
